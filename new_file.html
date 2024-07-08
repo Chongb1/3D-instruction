@@ -1,0 +1,38 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>创建场景</title>
+      <script src="https://laozicloud-sdk.obs.cn-east-2.myhuaweicloud.com:443/h5/app.js" id="AMRT"></script>
+  </head>
+  <body style="padding: 0; margin: 0;">
+      <div id="container" style="width: 100%;height: 100vh;" />
+  </body>
+  </html>
+  <script>
+      //鉴权参数
+      const param = {
+          appkey: 'oDynSaXKLAtv',  
+          appsecret: 'ZqjxMn41sF93yEgbieQDUlRK8ILcoYP6'
+      }
+      const viewer = new AMRT.Viewer( 'container', /*容器dom或者dom对应的id*/ param )
+	  
+	    viewer.loadModel('1806236981534003200', {
+	          onAnimeLoad: function( model ){
+	              //判断模型是否包含动画
+	              const hasAnimation = model.animation.hasAnimation()
+	              if( hasAnimation ){
+	                  //播放动画
+	                  model.animation.play()
+	              }
+	          }
+	      })
+	  
+	  viewer.loadModel('c', {
+	      background: false
+	  })
+      //通过老子云平台 ID 加载一个模型
+      viewer.loadModel('1806236981534003200')
+  </script>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>产品说明书</title>
+		<script src="https://laozicloud-sdk.obs.cn-east-2.myhuaweicloud.com:443/h5/app.js" id="AMRT"></script>
+	</head>
+	
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.7.14"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+	<!-- 引入样式 -->
+	<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+	<!-- 引入组件库 -->
+	<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+	<script id="AMRT" src="/E/date/3D/amrt_h5_v1.0.7.10/app.js"></script>
+	<script src="/var/www/html/elasticsearch-client-2.2.0.jar"></script>
+	
+	<style>
+		*{
+			margin: 0px;
+			padding: 0px;
+			
+		}
+		.top {
+	      background-color: rgb(255, 255, 255);
+	      width: 100%;
+	      height: 200px;
+	      z-index: 2;
+		  border-bottom: 5px solid #e8e8e8;
+		  display: flex;
+		  justify-content: center;
+		  align-items: center;
+		}
+		.fenkai {
+		  position: absolute;
+		  left: 879px;
+		  top: 406px;
+		  z-index: 7;
+		}
+		.tuoyan {
+		  border-radius: 50%;
+		  box-shadow: 0px 6px 14.72px 1.28px rgba(0, 0, 0, 0.71);
+		  position: absolute;
+		  top: 693px;
+		  width: 112px;
+		  height: 112px;
+		  z-index: 8;
+		  left: 790px;
+		}
+		.object {
+		  position: absolute;
+		  left: 145px;
+		  top: 894px;
+		  width: 528px;
+		  height: 606px;
+		  z-index: 4;
+		}
+		.install {
+		  background-image: url("electronics-devices_espresso-machine 拷贝.png");
+		  position: absolute;
+		  left: 883px;
+		  top: 1021px;
+		  width: 73px;
+		  height: 82px;
+		  z-index: 8;
+		}
+		.install2{
+		  border-radius: 50%;
+		  box-shadow: 0px 6px 14.72px 1.28px rgba(0, 0, 0, 0.71);
+		  position: absolute;
+		  left: 790px;
+		  top: 1001px;
+		  width: 112px;
+		  height: 112px;
+		  z-index: 7;
+		}
+		.information{
+		  background-image: url("electronics-devices_espresso-machine 拷贝 2.png");
+		  position: absolute;
+		  left: 881px;
+		  top: 1325px;
+		  width: 79px;
+		  height: 87px;
+		  z-index: 6;
+		}
+		.inform{
+		  border-radius: 50%;
+		  box-shadow: 0px 6px 14.72px 1.28px rgba(0, 0, 0, 0.71);
+		  position: absolute;
+		  left: 790px;
+		  top: 1309px;
+		  width: 112px;
+		  height: 112px;
+		  z-index: 5;
+		}
+		.title {
+		  font-size: 50px;
+		  font-family: "Microsoft YaHei UI";
+		}
+		.back {
+		  position: absolute;
+		  left: 51px;
+		  top: 80px;
+		  z-index: 3;
+		}
+		.el-drawer__header{
+			color: black;
+		}
+		.object1 {
+		  margin-left: -5px;
+		  margin-top: 500px;
+		}
+		.el-button.is-round {
+		  border-radius: 59px;
+		  padding: 18px 40px;
+		}
+		.el-button {
+	    display: inline-block;
+	    line-height: 1;
+	    white-space: nowrap;
+	    cursor: pointer;
+	    background: #FFF;
+	    border: 1px solid #DCDFE6;
+	    color: #606266;
+	    -webkit-appearance: none;
+	    text-align: center;
+	    -webkit-box-sizing: border-box;
+	    box-sizing: border-box;
+	    outline: 0;
+	    margin: 0;
+	    -webkit-transition: .1s;
+	    transition: .1s;
+	    font-weight: 500;
+	    padding: 12px 20px;
+	    font-size: 60px;
+	    border-radius: 4px;
+		}
+		.el-button--primary {
+		    color: #FFF;
+		    background-color: #409EFF; 
+		    border-color: #409EFF;
+		}
+
+		@import url("//unpkg.com/element-ui@2.15.14/lib/theme-chalk/index.css");  
+
+	</style>
+	<body>
+			<div class="top">
+				<i class="back"><img height="49px" width="48px" src="img/back.png" onclick="closePage()"></i>
+				<script>
+				function closePage() {
+				  window.close();
+				}
+				</script>
+				  </script>
+				<span class="title">产品说明书</span>
+			</div>
+			<div>
+				<div class="fenkai tuoyan"><img height="73px" width="73px" src="img/pop.png"/ style="margin-top: 22px;margin-left: 18px;"></div>
+				<div class="tuoyan"></div>
+			</div>
+			<div class="object1">
+			<div id="container" style="width: 808px;height: 806px;" /></div></div>
+			<script>
+			    //鉴权参数
+			    const param = {
+			        appkey: 'oDynSaXKLAtv',  
+			        appsecret: 'ZqjxMn41sF93yEgbieQDUlRK8ILcoYP6'
+			    }
+			    const viewer = new AMRT.Viewer( 'container', /*容器dom或者dom对应的id*/ param )
+				
+				viewer.loadModel('1806233150112796672', {
+				      background: false
+				})
+				
+				 viewer.sceneManager.setBackground('#FFFFFF')
+				  
+			    //通过老子云平台 ID 加载一个模型
+			    viewer.loadModel('1806233150112796672')
+			</script>
+			
+			<div>
+			<div id="app">
+				<div @click="drawer = true">
+					<div class="install install2"><img src="img/install.png"/ style="margin-top: 22px;margin-left: 20px;"></div>
+				</div>
+				<el-drawer
+				  title="安装内容"
+				  :style="{'color':'black' , 'font-size': '52px', 'text-align': 'center'}"
+				  :visible.sync="drawer"
+				  :direction="direction"
+				  :before-close="handleClose"
+				  :show-close='false'
+				  :size='350'>
+				  
+				  <!-- <span style="font-size: 99px;">我来啦!</span> -->
+				  <el-row>
+				    <el-button type="primary" round size="small" onclick="openinstall()">水箱</el-button>
+				    <el-button type="primary" round size="medium" onclick="openinform()">豆仓</el-button>
+				  </el-row>
+				  <script>
+					    function openinstall() {
+					    window.open("http://127.0.0.1:8848/3D/cs.html");
+					    }
+				  </script>
+				  <script>
+					    function openinform() {
+					    window.open("http://127.0.0.1:8848/3D/new_file.html");
+					    }
+				  </script>
+				</el-drawer>
+				</div>
+				<script>
+					var Main = {
+					    data() {
+					      return {
+					        drawer: false,
+					        direction: 'btt',
+					      };
+					    },
+					  };
+					var Ctor = Vue.extend(Main)
+					new Ctor().$mount('#app')
+				</script>
+<!-- 				<iframe frameborder="0" src="https://3dview.laozicloud.com/inset/general?id=a41cc4a1005b418badb17a50634afe2e" width="500" height="700"></iframe> -->
+<!-- 				<script>
+				    function openPopup() {
+				      window.open("https://3dview.laozicloud.com/inset/general?id=a41cc4a1005b418badb17a50634afe2e", "_blank", "width=500,height=500");
+				    }
+				  </script> -->
+				
+			</div>
+			<div class="information inform"><img  src="img/inform.png"/ style="margin-top: 22px;margin-left: 20px;" onclick="openPopup()"></div>
+				<script>
+					function openPopup() {
+					window.open("https://baike.baidu.com/item/%E5%92%96%E5%95%A1%E6%9C%BA/2377660?fr=ge_ala");
+					}
+				</script>
+		</div>
+	</body>
+</html>
